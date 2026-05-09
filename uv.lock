@@ -1,0 +1,23 @@
+version = 1
+revision = 3
+requires-python = ">=3.12"
+
+[[package]]
+name = "espeakng"
+version = "1.0.3"
+source = { registry = "https://pypi.tuna.tsinghua.edu.cn/simple" }
+sdist = { url = "https://pypi.tuna.tsinghua.edu.cn/packages/4a/78/73dc36a1c03d38f9ada0374baa8eeaf04cc0853b67a3517b1fb9d091d72b/espeakng-1.0.3.tar.gz", hash = "sha256:b07f464cdca968516a0dfcc171c587d522ba366fcc4cb5e0efbda2f3e2a1bd05", size = 16400, upload-time = "2024-02-05T16:23:15.612Z" }
+wheels = [
+    { url = "https://pypi.tuna.tsinghua.edu.cn/packages/e5/fd/25e124c0ee5784fbf584765e07e6e90ceaedf18b7d59b5c4c7840f20db10/espeakng-1.0.3-py3-none-any.whl", hash = "sha256:1199e7c1fa0ee3c3c6a0b68170ec2a8659ded1815794188de267fdee33d18df4", size = 16871, upload-time = "2024-02-05T16:23:14.472Z" },
+]
+
+[[package]]
+name = "ros2"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "espeakng" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "espeakng", specifier = ">=1.0.3" }]
