@@ -24,6 +24,7 @@ setup(
     entry_points={
         "console_scripts": [
             "novel_python_node = novel_python_node.novel_python_node:main",
+            "novel_reader = novel_python_node.read:main",
         ],
     },
 )

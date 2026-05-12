@@ -1,6 +1,4 @@
-from coverage.files import sep
-import rclpy
-from rclpy.node import Node
+from time import sleep
 import rclpy
 from rclpy.node import Node
 from example_interfaces.msg import String
@@ -25,6 +23,13 @@ class NovelPythonNode(Node):
 
     def speake_callback(self):
         speaker = espeakng.Speaker()
+        speaker.voice = "zh"
+        while rclpy.ok():
+            if not self.novelqueue.empty():
+                novel_line = self.novelqueue.get()
+                speaker.say(novel_line)
+            else:
+                sleep(1)
 
 
 def main(args=None):
