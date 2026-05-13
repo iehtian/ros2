@@ -19,4 +19,7 @@ name = "tsinghua"
 default = true
 
 [tool.ty.environment]
-extra-paths = ["/opt/ros/jazzy/lib/python3.12/site-packages"]
+extra-paths = [
+    "/opt/ros/jazzy/lib/python3.12/site-packages",
+    "/home/iehtian/ros2/Chapter3/ws/install/status_interface/lib/python3.12/site-packages",
+]
